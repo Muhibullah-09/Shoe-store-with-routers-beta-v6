@@ -61,19 +61,22 @@ const shoes = {
 };
 function App() {
   return (
-    <Router>
-        <nav>
-          <Header />
-        </nav>
-        <Routes>
-          <Route path = '/' element = {<Home/>}></Route>
-          <Route path = 'products' element = {<Products/>}>
-            <Route path = '/' element = {<ProductsIndex/>}></Route>
-            <Route path = ':productID' element = {<ProductDetails/>}></Route>
-          </Route>
-          <Route path = '*' element = {<NotFound/>}></Route>
-        </Routes>
-    </Router>
+    <div className = 'Head'>
+      <Router>
+          <nav>
+            <h2>Naaz Boot House</h2>
+            <Header />
+          </nav>
+          <Routes>
+            <Route path = '/' element = {<Home/>}></Route>
+            <Route path = 'products' element = {<Products/>}>
+              <Route path = '/' element = {<ProductsIndex/>}></Route>
+              <Route path = ':productID' element = {<ProductDetails/>}></Route>
+            </Route>
+            <Route path = '*' element = {<NotFound/>}></Route>
+          </Routes>
+      </Router>
+    </div>  
   );
 }
 export default App
